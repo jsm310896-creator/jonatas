@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 // Centraliza todos os paths SVG em um único objeto para fácil gerenciamento

@@ -1,3 +1,4 @@
+
 // FIX: Populated this file with constant definitions and exports to resolve module errors.
 import type { FaqItem, TestimonialItem } from './types';
 

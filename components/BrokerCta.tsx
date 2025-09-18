@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { usePolariumUrl } from '../hooks/usePolariumUrl';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';

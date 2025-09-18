@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 
 // Data for the first (top-right) candlestick chart

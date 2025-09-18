@@ -1,3 +1,4 @@
+
 import { useState, useEffect, useRef } from 'react';
 
 export const useScrollAnimation = (options?: IntersectionObserverInit) => {

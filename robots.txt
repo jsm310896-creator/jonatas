@@ -1,3 +1,4 @@
+
 # Permitir que todos os user-agents rastreiem o site
 User-agent: *
 Allow: /
