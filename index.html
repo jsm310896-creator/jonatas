@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf--8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JS Trader — Sinais de Opções Binárias para Traders de Sucesso</title>
+  <meta name="description" content="Entre na comunidade exclusiva de JS Trader no WhatsApp e receba sinais, estratégias e acompanhamento em tempo real para operar opções binárias com consistência." />
+  
+  <link rel="icon" href="https://jstrader.cloud/wp-content/uploads/2025/09/photo_2023-06-30_22-06-12.jpg" type="image/jpeg" />
+  <link rel="apple-touch-icon" href="https://jstrader.cloud/wp-content/uploads/2025/09/photo_2023-06-30_22-06-12.jpg" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="JS Trader — Sinais de Opções Binárias para Traders de Sucesso" />
+  <meta property="og:description" content="Entre na comunidade exclusiva de JS Trader no WhatsApp e receba sinais, estratégias e acompanhamento em tempo real." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1612010167108-3e6b359593c1?w=1200&h=630&fit=crop&q=70&fm=jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&family=Lexend:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --font-heading: 'Inter', sans-serif;
+      --font-body: 'Lexend', sans-serif;
+    }
+    
+    /* Rolagem suave em toda a página */
+    html, body {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: var(--font-body);
+      /* Enhanced background */
+      background-color: #020617; /* Slate-950 */
+      background-image: radial-gradient(ellipse 80% 80% at 50% -20%, rgba(148, 163, 184, 0.05), transparent);
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading);
+    }
+
+    /* Mini CSS para foco acessível */
+    :focus { outline: 3px solid rgba(59, 130, 246, 0.6); outline-offset: 2px; }
+    /* Limitar largura do vídeo para telas grandes */
+    .video-container { max-width: 900px; margin: 0 auto; }
+    
+    /* Estilos para Animação de Scroll */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000), transform 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    }
+    .is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Prevenir scroll no body quando o menu mobile estiver aberto */
+    .no-scroll {
+      overflow: hidden;
+    }
+
+    /* --- BACKGROUND GRAPHICS --- */
+    .background-graphics {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      overflow: hidden;
+      pointer-events: none;
+      perspective: 1000px; /* Creates 3D space */
+    }
+    
+    .bg-grid-pattern {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 2rem 2rem;
+    }
+
+    .graphic-3d-layer {
+      transition: transform 0.2s linear; /* Smooth transition for mouse move */
+    }
+
+    .candle-container {
+      --animation-order: 0;
+    }
+
+    .candle-container .candle line {
+      stroke-dasharray: 200;
+      stroke-dashoffset: 200;
+      animation: draw-wick 1s ease-out forwards;
+      animation-delay: calc(var(--animation-order) * 0.3s + 0.5s); /* Add base delay */
+    }
+
+    .candle-container .candle rect {
+      opacity: 0;
+      animation: fade-in-body 0.6s ease-out forwards;
+      animation-delay: calc(var(--animation-order) * 0.3s + 0.8s); /* Delay after wick */
+    }
+
+    /* Stagger the candle animations */
+    .candlestick-chart .candle-container:nth-child(1) { --animation-order: 1; }
+    .candlestick-chart .candle-container:nth-child(2) { --animation-order: 2; }
+    .candlestick-chart .candle-container:nth-child(3) { --animation-order: 3; }
+    .candlestick-chart .candle-container:nth-child(4) { --animation-order: 4; }
+    .candlestick-chart .candle-container:nth-child(5) { --animation-order: 5; }
+    .candlestick-chart .candle-container:nth-child(6) { --animation-order: 6; }
+    .candlestick-chart .candle-container:nth-child(7) { --animation-order: 7; }
+    .candlestick-chart .candle-container:nth-child(8) { --animation-order: 8; }
+    .candlestick-chart .candle-container:nth-child(9) { --animation-order: 9; }
+    .candlestick-chart .candle-container:nth-child(10) { --animation-order: 10; }
+
+    @keyframes draw-wick {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    @keyframes fade-in-body {
+      from {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Animação para botões de CTA */
+    @keyframes pulse-slow {
+      50% {
+        transform: scale(1.03);
+        box-shadow: 0 0 20px rgba(16, 185, 129, 0.6);
+      }
+    }
+    .animate-pulse-slow {
+      animation: pulse-slow 2.5s infinite cubic-bezier(0.4, 0, 0.6, 1);
+    }
+    
+    /* Animação para botão de play do vídeo */
+    @keyframes pulse-play-button {
+      0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+      }
+      50% {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+      }
+    }
+    .animate-pulse-play {
+      animation: pulse-play-button 2s infinite ease-in-out;
+    }
+
+  </style>
+
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1182564510151662');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1182564510151662&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+</head>
+<body class="antialiased bg-slate-900 text-gray-200">
+  <div id="root"></div>
+</body>
+</html>

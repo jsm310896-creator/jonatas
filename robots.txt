@@ -1,0 +1,6 @@
+# Permitir que todos os user-agents rastreiem o site
+User-agent: *
+Allow: /
+
+# Localização do Sitemap
+Sitemap: https://jstrader.cloud/sitemap.xml
