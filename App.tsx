@@ -1,4 +1,3 @@
-
 import React, { Suspense, lazy, useEffect } from 'react';
 
 // Eagerly loaded components (above-the-fold or critical)
